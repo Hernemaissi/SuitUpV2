@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="span6 offset3">
+  <%= form_for @company do |f| %>
+
+
+
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+
+
+      <%= submit_tag "Register company", class: "btn btn-large btn-primary" %>
+    <% end %>
+ </div>
+</div>

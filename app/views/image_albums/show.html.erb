@@ -1,0 +1,15 @@
+<h1> Images in this album </h1>
+
+<% @album.images.each do |image| %>
+
+<% if !image.url.nil? %>
+ <p> <%= image_tag image.url %> </p>
+<% else %>
+  <% unless image.image_url.nil?  %>
+         <%= image_tag image.image_url.to_s %>
+ <% else %>
+ <p> No image uploaded </p>
+ <% end %>
+<% end %>
+
+<% end %>

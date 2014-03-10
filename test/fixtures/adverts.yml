@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: adverts
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  description :text
+#  color       :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#  company_id  :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  color: MyString
+
+two:
+  name: MyString
+  description: MyText
+  color: MyString

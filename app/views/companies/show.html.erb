@@ -1,0 +1,20 @@
+<h1> <%= @company.name %> </h1>
+
+<p> About us: </p>
+<p> <%= @company.description %> </p>
+
+<p> Owned by: </p>
+
+<ul>
+  <% @company.users.each do |u| %>
+  <li><%= u.name  %> </li>
+  <% end %>
+</ul>
+
+<p> Adverts </p>
+
+<ul>
+  <% @company.adverts.each do |a| %>
+  <li><%= link_to a.name, a  %> </li>
+  <% end %>
+</ul>
