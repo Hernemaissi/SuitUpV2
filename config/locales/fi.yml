@@ -1,0 +1,166 @@
+# Localization file for Japanese.
+
+fi:
+  application:
+    title: "Suit Up"
+    
+  #navigation in app/views/layout/application.html.erb
+  nav:
+    home: "Etusivu"
+    about: "Mikä SuitUp?"
+    contact: "Yhteystiedot"
+    
+  #footer in app/views/layout/application.html.erb   
+  footer:
+    text: "東京大学大学院 情報理工学系　研究科電子情報学専攻　大学院情報学環学際情報学府"
+    
+  #app/views/pages
+  pages:
+  
+    #index.html.erb
+    index:
+      title: "お知らせ"
+      food_log: "あなたの食事の記録をほんの少しだけお助けします."
+      
+    #about.html.erb
+    about:
+      title: "相澤・山崎研について"
+      
+    #contact.html.erb
+    contact:
+      title: "所在地・連絡先"
+      intro: "2010年3月23日,本郷キャンパス研究室は工学部2号館11Fに移転いたしました.本郷にお越しの際にはご注意ください."
+      aizawas_room_title: "教員室(相澤)"
+      yamasakis_room_title: "教員室(山崎）"
+      members_room_title: "学生オフィス"
+      aizawas_room: "112D4"
+      yamasakis_room: "112D3"
+      members_room: "112C2"
+      address_title: "郵便物送付先"
+      address_html: "〒113-8656　東京都文京区本郷 7-3-1　工学部2号館<br>東京大学　大学院情報理工学系研究科 電子情報学専攻 相澤・山崎研究室"
+      map_html: "<a href=\"http://www.u-tokyo.ac.jp/campusmap/cam01_04_03_j.html\">> 工学部2号館案内図(東京大学サイト内）</a>"
+      access_html: "<a href=\"http://www.u-tokyo.ac.jp/campusmap/map01_02_j.html\">> 本郷キャンパスへのアクセス(東京大学サイト内）</a>"
+      phone_title: "電話・FAX"
+      phone_aizawa: "03-5841-6651（内線：26651）"
+      phone_yamasaki: "03-5841-6698（内線：26698）"
+      phone_members: "03-5841-6761（内線：26761）"
+      fax_aizawa: "03-5841-6693"
+      fax_yamasaki: "03-5841-6698"
+      fax_members: "03-5841-6761"
+      email_title: "メール"
+      email: "%{url}ページへ"
+      
+    #links.html.erb
+    links:
+      title: "リンク"
+      headings:
+        university: "東大関連"
+        organizations: "学会"
+        materials: "論文・書籍検索"
+        projects: "参加プロジェクト・共同研究機関"
+        
+    #people.html.erb    
+    people:
+      title: "メンバー紹介"
+      headings:
+        kyouju: "教授"
+        junkyouju: "准教授"
+        tokunin: "特任研究員"
+        kyakuin: "客員研究員・交流研究員"
+        kouryuu: "交流研究員"
+    #    kenkyuuin: "研究員"
+    #    gakubukenkyuu: "学部研究生"
+        gakujutsushien: "学術支援員"
+        hakushikatei: "博士課程"
+        sannen: "3年"
+        ninen: "2年"
+        ichinen: "1年"
+        shuushikatei: "修士課程"
+        sotsuron: "卒論生"
+      text: "現在，相澤・山崎研究室のメンバーは教授1名，准教授1名，特任研究員1名，客員研究員1名，交流研究員1名，学術支援員1名，博士課程7名，修士課程12名，卒論生10名，研究員1名，学府研究生1名の計37名です．
+        <br>メンバーにメールを送信する際には,お手数ですが記載されているaccountの後に '@hal.t.u-tokyo.ac.jp' を付加してください."
+    people_content:
+      jouridenshijouhou: "情理・電子情報"
+        
+  #app/views/research
+  research:
+  
+    #index.html.erb
+    index:
+      title: "現在進行中のテーマ"
+      headings:
+        lifelog: "ライフログ"
+        sanjigen: "３次元映像処理"
+        multimedia: "マルチメディアと画像処理"
+        digitalmuseum: "デジタルミュージアム＆漫画画像処理"
+       
+      
+  #app/views/publications
+  publications:
+  
+    #index.html.erb
+    index:
+      title: "発表文献"
+      headings:
+        aizawa_yamazaki: "相澤・山崎研究室 （2007～）"
+        yamazaki: "相澤研究室 （1999～2006）"
+        hatori_aizawa: "羽鳥・相澤研究室 （～1999）"
+        earlier: "1983～1993年度"
+      links:
+        y2013: "平成25年度（2013年4月～）"
+        y2012: "平成24年度（2012年4月～2013年3月）"
+        y2011: "平成23年度（2011年4月～2012年3月）"
+        y2010: "平成22年度（2010年4月～2011年3月）"
+        y2009: "平成21年度（2009年4月～2010年3月）"
+        y2008: "平成20年度（2008年4月～2009年3月）"
+        y2007: "平成19年度（2007年4月～2008年3月）"
+        y2006: "平成18年度（2006年4月～2007年3月）"
+        y2005: "平成17年度（2005年4月～2006年3月）"
+        y2004: "平成16年度（2004年4月～2005年3月）"
+        y2003: "平成15年度（2003年4月～2004年3月）"
+        y2002: "平成14年度（2002年4月～2003年3月）"
+        y2001: "平成13年度（2001年4月～2002年3月）"
+        y2000: "平成12年度（2000年4月～2001年3月）"
+        y1999: "平成11年度（1999年4月～2000年3月）"
+        y1998: "平成10年度（1998年4月～1999年3月）"
+        y1997: "平成9年度（1997年4月～1998年3月）"
+        y1996: "平成8年度（1996年4月～1997年3月）"
+        y1995: "平成7年度（1995年4月～1996年3月）"
+        y1994: "平成6年度（1994年4月～1995年3月）"
+        y1993: "昭和58年度～平成5年度（1983年4月～1994年3月）"
+        
+    #show.html.erb
+    show:
+      title: "%{year}年度 発表文献"
+      headings:
+        journals: "学術雑誌"
+        international: "国際会議"
+        workshops: "国内シンポジウム・研究会"
+        annual: "国内大会"
+        books: "書籍等"
+        commentaries: "解説等"
+        exhibitions: "メディア・展示等"
+        awards: "受賞"
+        others: "その他"
+      
+  #news in app/views/pages/index.html.erb
+  #add new items at the top
+  #you can use html in content_html 
+  #escape quotes with \
+  #don't linebreak japanese text, because it will insert spaces into the text
+  news:
+    - published_at: "2013年07月19日"
+      title: "スマートフォン版FoodLogリリース!"
+      content_html: "foo.log Inc.と共同で研究開発を進めているFoodLogのスマートフォン版を2013年7月17日に公開しました．<br><a href=\"http://app.foodlog.jp/\">アプリページ</a>　<a href=\"http://www.youtube.com/watch?v=9tO-5Rz46qA\">ビデオ</a>"
+    - published_at: "2013年06月19日"
+      title: "SUGATA MIRROR展示"
+      content_html: "東京都現代美術館の展示<a href=\"http://www.mot-art-museum.jp/exhibition/146/\">「おばけとパンツとお星さま」</a>（6月29日～9月8日）にて研究室で構築したSUGATA MIRRORが展示されます."
+    - published_at: "2013年06月05日"
+      title: "第8回内閣府食育推進全国大会"
+      content_html: "6月22日，23日に広島県立広島産業会館にて<a href=\"http://www8.cao.go.jp/syokuiku/more/promotion/convention/8th/index.html\">第8回内閣府食育推進全国大会</a>にて国立健康栄養研究所とともに，詳細な食事記録をとるためのスマートフォン版の新FoodLogのデモ，体験案内をします．"
+    - published_at: "2013年05月12日"
+      title: "丹羽高柳業績賞"
+      content_html: "映像情報メディア学会から，丹羽高柳業績賞を，\"画像処理技術を活用した食事ログに関する先駆的研究と展開\"に関して，相澤清晴が受賞しました．"
+    - published_at: "2013年05月05日"
+      title: "五月祭"
+      content_html: "五月祭(5月18,19日) の企画で，研究室公開をします．<br><a href=\"http://eeic.jp/\">http://eeic.jp/</a>"

@@ -1,23 +1,167 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+# Localization file for English.
 
 en:
-  hello: "Hello world"
+  application:
+    title: "Suit Up"
+    
+  #navigation in app/views/layout/application.html.erb    
+  nav:
+    home: "Home"
+    about: "About"
+    contact: "Contact"
+    
+  #footer in app/views/layout/application.html.erb   
+  footer:
+    text: "Tokyo University of Technology"
+  #app/views/pages
+  pages:
+    #index.html.erb
+    index:
+      title: "News"
+      food_log: "Track and analyze your daily food choices with our Food Log project!"
+      
+    #about.html.erb
+    about:
+      title: "About Us"
+      
+    #contact.html.erb
+    contact:
+      title: "Contact"
+      intro: "We conduct our research activities mainly at Hongo Campus. The Lab is located at the 11th floor in the Faculty of Engineering Builing No.2."
+      aizawas_room_title: "Prof. Aizawa's room"
+      yamasakis_room_title: "Prof. Yamasaki's room"
+      members_room_title: "Lab members' room"
+      aizawas_room: "112D4"
+      yamasakis_room: "112D3"
+      members_room: "112C2"
+      address_title: "Mailing Address"
+      address_html: "Aizawa Yamasaki Laboratory<br>Department of Information and Communication Engineering, The University of Tokyo,<br>Fac. of Eng. Bldg. #2, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan"
+      map_html: "<a href=\"http://www.u-tokyo.ac.jp/en/about/documents/Hongo_CampusMap_E.pdf\"> > Hongo Campus Map</a>"
+      access_html: "<a href=\"http://www.u-tokyo.ac.jp/en/about/documents/accessmap_E.pdf\">> Access to Hongo Campus</a>"
+      phone_title: "Phone and FAX"
+      phone_aizawa: "(+81)-3-5841-6651 (Ext. 26651)"
+      phone_yamasaki: "+(81)-3-5841-6698 (Ext. 26698）"
+      phone_members: "(+81)-3-5841-6761 (Ext. 26761)"
+      fax_aizawa: "(+81)-3-5841-6693"
+      fax_yamasaki: "(+81)-3-5841-6698"
+      fax_members: "(+81)-3-5841-6761"
+      email_title: "Email"
+      email: "If you want to contact someone directly, see our %{url} page."
+      
+      
+    #links.html.erb
+    links:
+      title: "Links"
+      headings:
+        university: "The University of Tokyo"
+        organizations: "Societies and professional organizations"
+        materials: "Materials"
+        projects: "Projects and collaborative research"
+        
+    #people.html.erb    
+    people:
+      title: "People"
+      headings:
+        kyouju: "Professor"
+        junkyouju: "Associate Professor"
+        tokunin: "Project Researchers"
+        kyakuin: "Visiting Researchers, Exchange Researchers"
+        gakujutsushien: "Secretary"
+        hakushikatei: "Ph.D Students"
+        sannen: "3rd Year"
+        ninen: "2nd Year"
+        ichinen: "1st Year"
+        shuushikatei: "Master Students"
+        sotsuron: "Undergraduates"
+      text: "To send e-mail to someone, append \"@hal.t.u-tokyo.ac.jp\" to the account name."
+    people_content:
+      jouridenshijouhou: ""
+    
+  #app/views/research
+  research:
+    #index.html.erb
+    index:
+      title: "Current Projects (2012)"
+      headings:
+        lifelog: "Life Log Technology and FoodLog"
+        sanjigen: "Three Dimensional Video"
+        multimedia: "CGM and Social Media"
+        digitalmuseum: "Digital Museum, Manga"
+
+  #app/views/publications
+  publications:
+  
+    #index.html.erb
+    index:
+      title: "Publications"
+      headings:
+        aizawa_yamazaki: "Aizawa-Yamasaki Laboratory（2007-）"
+        yamazaki: "Aizawa Laboratory（1999-2006）"
+        hatori_aizawa: "Hatori-Aizawa Laboratory （-1999）"
+        earlier: "1983-1993"
+      links:
+        y2013: "2013 academic year (Apr. 2013 - )"
+        y2012: "2012 academic year (Apr. 2012 - Mar. 2013)"
+        y2011: "2011 academic year (Apr. 2011 - Mar. 2012)"
+        y2010: "2010 academic year (Apr. 2010 - Mar. 2011)"
+        y2009: "2009 academic year (Apr. 2009 - Mar. 2010)"
+        y2008: "2008 academic year (Apr. 2008 - Mar. 2009)"
+        y2007: "2007 academic year (Apr. 2007 - Mar. 2008)"
+        y2006: "2006 academic year (Apr. 2006 - Mar. 2007)"
+        y2005: "2005 academic year (Apr. 2005 - Mar. 2006)"
+        y2004: "2004 academic year (Apr. 2004 - Mar. 2005)"
+        y2003: "2003 academic year (Apr. 2003 - Mar. 2004)"
+        y2002: "2002 academic year (Apr. 2002 - Mar. 2003)"
+        y2001: "2001 academic year (Apr. 2001 - Mar. 2002)"
+        y2000: "2000 academic year (Apr. 2000 - Mar. 2001)"
+        y1999: "1999 academic year (Apr. 1999 - Mar. 2000)"
+        y1998: "1998 academic year (Apr. 1998 - Mar. 1999)"
+        y1997: "1997 academic year (Apr. 1997 - Mar. 1998)"
+        y1996: "1996 academic year (Apr. 1996 - Mar. 1997)"
+        y1995: "1995 academic year (Apr. 1995 - Mar. 1996)"
+        y1994: "1994 academic year (Apr. 1994 - Mar. 1995)"
+        y1993: "1983-1993 academic years (Apr. 1983 - Mar. 1994)"
+        
+    #show.html.erb
+    show:
+      title: "Publications %{year}"
+      next_year: "Next year(%{year})"
+      prev_year: "Previous year(%{year})"
+      headings:
+        journals: "Journals"
+        international: "International Conferences"
+        workshops: "Domestic Conferences and Symposia"
+        annual: "Domestic Annual Conferences"
+        books: "Books"
+        commentaries: "Commentaries etc"
+        exhibitions: "Media & Exhibitions"
+        awards: "Honors and awards"
+        others: "Others"
+        
+  #news in app/views/pages/index.html.erb
+  #add new items at the top
+  #you can use html in content_html
+  #!!!escape quotes with \
+  news:
+
+ 
+    - published_at: "July 17, 2013"
+      title: "FoodLog for Smartphone was launched!"
+      content_html: "<p>Working together with foo.log Inc, FoodLog for Smartphone was launched July 17, 2013.</p><p> Go to <a href=\"http://app.foodlog.jp/\">http://app.foodlog.jp/</a>, the video can be seen <a href=\"http://www.youtube.com/watch?v=9tO-5Rz46qA/\">here</a></p>"
+ 
+    - published_at: "June 22,23, 2013"
+      title: "8th National Convention of SHOKUIKU"
+      content_html: "<p>Our \"FoodLog for Smartphone\", which assists food recording by image recognition, will be demonstrated.</p>"
+    
+    - published_at: "June 19, 2013"
+      title: "SUGATA MIRROR for the Exhibition"
+      content_html: "<p>SUGATA MIRROR of our project is displayed at the exhibition <a href=\"http://www.mot-art-museum.jp/exhibition/146/\">\"Ghosts, Underpants and Stars\"</a> at Museum of Contenporary Art Tokyo (Jun.29 - Sep.9, 2013)</p>" 
+      
+    - published_at: "May 22, 2013"
+      title: "NIWA TAKAYANAGI Achievement Award"
+      content_html: "<p>Prof. Kiyoharu Aizawa received NIWA TAKAYANAGI Achievement Award from ITE for his contributions for pionieering work in the multimedia foodlog system.</p>"
+      
+    - published_at: "May 5, 2013"
+      title: "March Festival"
+      content_html: "<p>During the Tokyo University March Festival(18.-19.5.) the Lab will be open 
+      to the public. </p><p><a href=\"http://eeic.jp/\">More information</a></p>"

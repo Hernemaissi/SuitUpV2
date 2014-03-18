@@ -1,0 +1,25 @@
+
+/* ============================================================
+Media query variables
+These are used as breakpoints for changes in the design when the screen size changes
+============================================================ */
+$header-large: "screen and (min-width:25em)";
+$language-bar-margin: "screen and (min-width:56em)";
+$side-menu-position: "screen and (min-width:45em)";
+$navigation-dropdown: "screen and (min-width:32em)";
+$navigation-large: "screen and (min-width:57em)";
+
+
+/* ============================================================
+Colors
+============================================================ */
+$dark-red: #A92626;
+$light-grey: #D8D8D8;
+$text-grey: #535362;
+
+
+/* ============================================================
+Fonts
+============================================================ */
+$base-font: verdana,arial,helvetica,sans-serif;
+$nav-font: corbertregular,verdana,arial,helvetica,sans-serif;

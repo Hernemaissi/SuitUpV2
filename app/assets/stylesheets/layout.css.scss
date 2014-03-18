@@ -1,0 +1,453 @@
+@import "mixins";
+@import "variables";
+
+/* ============================================================
+Containers
+============================================================ */
+
+body {
+    border-top-color:$dark-red;
+    border-top-style: solid;
+    @include rem('border-top-width',4px);
+}
+.main-container {
+    @include rem('max-width',1000px);
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+Header
+============================================================ */
+header {
+    margin: 0 auto;
+    @include rem('margin-bottom',30px);
+    @include rem('max-width',900px);
+        font-family: $nav-font;
+    
+    a {
+        color: black;
+        font-weight: normal;
+    }
+    
+    a:hover {
+        color:$dark-red;
+        text-decoration: none;
+    }
+    
+    a.current {
+        text-weight: bold !important;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    
+    /* ============================================================
+    Language bar
+    ============================================================ */
+    .language-bar {
+                    width: 90%;
+                max-width: 90%;
+                margin: 0 auto;
+            
+                        @media #{$language-bar-margin} {
+                        width: auto;
+                        @include rem('margin', 0 95px);
+        }
+            
+        ul{
+            overflow: hidden;
+            margin: 0;
+        }
+        
+        li{
+            float: right;
+            list-style: none;
+            @include rem('margin',5px 0px);
+            @include rem('margin-left',10px);
+            
+            &:before {
+                content: none;
+            }
+            
+            &.internal {
+                display: none;
+                @media #{$navigation-dropdown} {
+                    display: block;
+                    float: left;
+                    background-color: $dark-red;
+                    margin: 0;
+                    @include rem('padding',5px 5px); 
+                    
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+        
+        a {
+            @include rem('font-size',14px);
+        }
+    }
+    
+    .separator-line {
+        border-bottom: 1px solid $light-grey;
+        margin: 0 auto;
+        width: 60%;
+        height: 3px;
+
+        &.double {
+            border-top: 1px solid $light-grey;
+        }
+    }
+    
+    /* ============================================================
+    Banner
+    ============================================================ */
+    .banner {
+        display: block;
+    }
+    .banner-large {
+        display: none;
+        @include rem('margin',35px 0);
+        margin-left: auto; 
+        margin-right: auto;
+        @media #{$header-large}
+        {
+            display: block;
+        }
+    }
+    
+    .banner-small {
+        margin: 0 auto;
+        @include rem('margin-top',20px);
+        @include rem('margin-bottom',20px);
+        @media #{$header-large} {
+            display: none;
+        }
+    }
+    
+    img {
+        display: block;
+        max-width: 90%;
+        @include rem('width',200px);
+        vertical-align: middle;
+        text-align: center;
+        margin-left: auto; 
+        margin-right: auto;
+        @include rem('margin-bottom',10px);
+                    
+        @media #{$header-large}
+        {
+            @include rem('width',710px);
+        }
+    }
+
+    .header-line {
+        display: none;
+        @media #{$navigation-dropdown} {
+            display: block;
+        }
+    }
+}
+
+
+/* ============================================================
+Dropdown navigation for small screens
+============================================================ */
+nav.dropdown {
+    float: left;
+    margin-left: 5%;
+    overflow: hidden;
+    
+    html[lang="en"] & {
+        font-family: $nav-font;
+    }
+    
+    @media #{$navigation-dropdown} {
+        display: none;
+    }
+
+    li {
+        z-index: 100;
+        list-style: none;
+        @include rem('margin', 0 5px);
+        border: white solid 1px;
+        background-color: $dark-red;
+        @include rem('margin', 0 5px);
+        
+        &:before {
+            content: none;
+        }
+        
+        a {
+            color: white;
+            text-align: center;
+            
+            &.current {
+                font-weight: bold;
+            }
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .dropdown-icon {
+        @include rem('height', 25px);
+        @include rem('width', 25px);
+        margin: 0;
+        background: asset-url("menu-icon.png", image);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+     ul {
+        position: absolute;
+        margin:0;
+        left: 0;
+        opacity: 0;
+        background: white;
+     
+        -webkit-border-radius: 0 0 5px 5px;
+        -moz-border-radius: 0 0 5px 5px;
+        border-radius: 0 0 5px 5px;
+     
+        -webkit-transition: opacity .25s ease .1s;
+        -moz-transition: opacity .25s ease .1s;
+        -o-transition: opacity .25s ease .1s;
+        -ms-transition: opacity .25s ease .1s;
+        transition: opacity .25s ease .1s;
+    }
+     
+    ul li {
+        height: 0;
+        overflow: hidden;
+        @include rem('padding', 5px 15px);
+        
+        -webkit-transition: height .25s ease .1s;
+        -moz-transition: height .25s ease .1s;
+        -o-transition: height .25s ease .1s;
+        -ms-transition: height .25s ease .1s;
+        transition: height .25s ease .1s;
+    }
+ 
+    &.expanded ul { 
+        opacity: 1; 
+    }
+    
+    &.expanded ul li {
+        @include rem('height', 22px);
+        overflow: visible;
+    } 
+}
+
+/* ============================================================
+Navigation for large screens
+============================================================ */
+
+nav.large {
+    display: none;
+    
+    @media #{$navigation-dropdown} {
+        display: block;
+        clear: both;
+        margin: 0 auto;
+        @include rem('font-size',16px 0);
+        @include rem('width',500px);
+        
+        .english {
+            font-family: 'corbertregular', sans-serif;
+        }
+    
+        ul {
+            list-style: none;
+            margin: 0 auto;
+            text-align: center;
+            text-decoration: none;
+            @include rem('margin-top',20px);
+            @include rem('margin-bottom',10px);
+        }
+        li {
+            display:inline;
+            padding: 22px; 
+            margin: 0;
+                
+            &:before {
+                content: none;
+                color: black;
+            }
+
+            a{
+                display:inline-block;
+                @include rem('margin-bottom',10px);
+                
+                &.current {
+                    color: $dark-red;
+                    font-weight: normal;
+                
+                    div[lang="en"] {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        
+    }
+    @media #{$navigation-large} {
+        width: 100%;
+    }
+}
+
+
+/* ============================================================
+Document
+============================================================ */
+
+.document {
+    padding:0 5% 2em;
+}
+
+.document:before, .document:after,
+.main:before, .main:after {
+    content: "";
+    display: table;
+}
+
+.document:after,
+.main:after {
+    clear: both;
+}
+
+.document,
+.main {
+    *zoom: 1;
+}
+
+@media #{$side-menu-position} {
+    .main {
+        width:73%;
+        margin: 0 auto;
+        
+        &.enable-side-menu {
+          float:right;
+        }
+    }
+}
+
+h1.enable-side-menu {
+    @media #{$side-menu-position} {
+        margin-left: 25%;
+        display: inline;
+        float: left;
+    }
+}
+
+/* ============================================================
+Sidemenu / side-menu-title menu
+============================================================ */
+.side-menu {
+    /* side-menu-title menu style */
+    clear:both;
+    border-left: 1px solid $light-grey;
+    @include rem('margin', 40px 15px 0 0);
+    @include rem('padding-left', 10px);
+
+    @media #{$side-menu-position} {
+            width:23%;
+            float:left;
+            text-align: right;
+            border-right: 1px solid $light-grey;
+            border-left: none;
+            padding-left: 0;
+    }
+    
+    &.hide-on-small-screens {
+      display:none;
+        @media #{$side-menu-position} {
+            display: block;
+        } 
+    }    
+
+    .side-menu-title {
+        @include rem('font-size', 10px);
+        color: grey;
+        font-family: $base-font;
+    }
+    
+    li {
+        list-style: none;
+        @include rem('margin', 10px 15px 10px 0);
+        &:before {
+            content: none;
+        }
+        li {
+            @include rem('margin', 1px 15px 1px 0);
+            &:after {
+                content: " <";
+                color: grey;
+            }
+        }
+    }
+    
+    a {
+        color: $text-grey;
+        &.current {
+            color: $dark-red;
+        }
+    }
+    
+    /* info-box style */
+    &.info-box {
+        border: 4px double $light-grey;    
+        text-align: left;
+        color: $text-grey;
+        
+        a, div, p, li {
+            @include rem('margin', 10px);
+        }
+            a {
+            color: $dark-red;
+        }
+    }
+}
+
+
+/* ============================================================
+Captions
+============================================================ */
+
+.caption {
+    color: $text-grey;
+    text-align: center;
+}
+
+/* ============================================================
+Footer
+============================================================ */
+.footer-background {
+    color:#FFFFFF;
+    background-color:darken($dark-red, 10%);
+    padding:0.75em 0;
+    @include rem('font-size', 14px);
+    
+    .footer-container {
+        @include rem('max-width',1000px);
+        margin: 0 auto;
+        
+        footer {
+            padding:0 5%;
+            @media #{$side-menu-position} {
+                margin-left: 23%;
+            }
+        }
+    }
+}

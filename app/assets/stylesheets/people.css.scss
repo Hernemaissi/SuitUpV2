@@ -1,0 +1,61 @@
+@import "mixins.css.scss";
+@import "variables.css.scss";
+
+/* ============================================================
+Media query variables
+============================================================ */
+$vcard-rows: "screen and (min-width:25em)";
+
+
+/* ============================================================
+People
+============================================================ */
+
+section, h2, h3 {
+  clear: both;
+}
+
+.vcard {
+    box-shadow: 1px 1px 6px rgba(50, 50, 50, 0.35);
+    width: 90%;
+    width: calc(100% - 0.9rem*2 );
+    float:left;
+    padding: 0.9rem;
+    @include rem('margin-bottom',15px);
+    
+    @media #{$header-large} {
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    &:nth-child(2n) {
+      margin-right:2%;
+    }
+    
+    .name {
+        width: 100%;
+        margin-right: 2%;
+        display: inline-block;
+        @include rem('margin-bottom',10px);
+        @media #{$header-large} {
+            -webkit-align-self: flex-end;
+            align-self: flex-end;
+            width: 50%;
+            @include rem('min-width',170px);
+            @include rem('margin-bottom',0px);
+        }
+    }
+    
+    .info {
+        display: inline-block;
+        @media #{$header-large} {
+            -webkit-align-self: stretch;
+            align-self: stretch;
+            width: 67%;
+        }
+        @include rem('font-size',15px);
+        div[lang="en"] {
+            @include rem('font-size',14px);
+        }
+    }
+}

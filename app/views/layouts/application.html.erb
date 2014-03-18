@@ -1,16 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Suitupv2</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+<html lang="<%= I18n.locale || "en" %>">
+	<head>
+        <meta charset="UTF-8">
+		<title> <%= t "application.title" %> </title>
+		<%= stylesheet_link_tag "application", :media => "all", "data-turbolinks-track" => true  %>
 
-<%= yield %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
+		<%= csrf_meta_tags %>
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+
+<div class="main-container">
+			<header>
+				<nav id="dropdown-nav" class="dropdown">
+					<div class="dropdown-icon"></div>
+					<ul>
+
+						<li>
+							<!-- nav_link helper can be found in app/helpers/application_helper.rb -->
+							<%= nav_link_single("nav.home" , root_path) %>
+						</li>
+						<li>
+							<%= nav_link_single("nav.about", about_path) %>
+						</li>
+						<li>
+							<%= nav_link_single("nav.contact", contact_path) %>
+						</li>
+					</ul>
+
+				</nav>
+
+				<div class="language-bar">
+					<ul>
+						<li>
+							<%= link_to "Suomi", :locale =>"fi", :lang=>"fi" %>
+						</li>
+						<li>
+							<%= link_to "English", :locale=>"en", :lang=>"en" %>
+						</li>
+					</ul>
+				</div>
+				<a class="banner" href="/">Suit Up Banner Goes Here </a>
+				<!--<a class="banner" href="/"> <%= image_tag("banner-small.png", :class => "banner-small") %>
+				<%= image_tag("banner-large.png", :class => "banner-large") %> </a>-->
+				<div class="separator-line header-line"></div>
+				<nav class="large">
+					<ul>
+						<li>
+							<!-- nav_link helper can be found in app/helpers/application_helper.rb -->
+							<%= nav_link_single("nav.home" , root_path) %>
+						</li>
+						<li>
+							<%= nav_link_single("nav.about", about_path) %>
+						</li>
+						<li>
+							<%= nav_link_single("nav.contact", contact_path) %>
+						</li>
+					</ul>
+				</nav>
+				<div class="separator-line double"></div>
+			</header>
+			<div role="document" class="document">
+				<%= yield %>
+			</div>
+		</div>
+		<div class="footer-background">
+			<div class="footer-container">
+				<footer>
+					<p>
+						<%= t "application.title" %>
+					</p>
+					<p>
+						<!--<%= t "footer.text" %>-->
+					</p>
+				</footer>
+			</div>
+		</div>
+
+
+
 <%= debug(params) if Rails.env.development? %>
 </body>
 </html>
