@@ -1,0 +1,31 @@
+<div id="categories">
+	<div><%= @current_gender %></div>
+	<div>Valitse vaatetyyppi:</div>
+	
+	<a id="0" class="selected" href="">Kaikki</a>
+	
+	<% @categories.each do |c| %>
+		<%= link_to c.name, filterc_path(:id => c.id), :remote => true, :id => c.id %>
+	<% end %>
+</div>
+
+<div id="parts">
+</div>
+
+<div id="available">
+	<input type="checkbox" name="available" value="available" checked="checked"/> Näytä vain vapaat
+</div>
+
+<div id="price">
+	Hinta: <input type="text" id="price_lower" name="price_lower"/> - <input type="text" id="price_higher" name="price_higher"/>
+</div>
+
+<div id="condition">
+	Kunto: <%= select("filter", "condition", WwwDesign::Application::CONDITIONS, { :include_blank => true }) %>
+</div>
+
+<div id="color">
+	Väri: <%= select("filter", "color", WwwDesign::Application::COLORS, { :include_blank => true }) %>
+</div>
+
+<button type="button">Hae</button> 

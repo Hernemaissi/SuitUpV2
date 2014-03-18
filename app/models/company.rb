@@ -10,8 +10,8 @@
 #
 
 class Company < ActiveRecord::Base
-
-
   has_many :users
   has_many :adverts
+  is_impressionable :counter_cache => true, :column_name => :view_count, :unique => :session_hash
+
 end

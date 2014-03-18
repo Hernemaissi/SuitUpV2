@@ -1,0 +1,14 @@
+<% if @results.empty? %>
+	Ei tuloksia.
+
+<% else %>
+
+	<% @results.each do |ad| %>
+			<%= render :partial => 'ads/ad_thumbnail', :locals => {:ad => ad, :hover => true} %>
+	<% end %>
+	<div class="paginate">
+	<%= will_paginate @results %>
+	</div>
+
+	
+<% end %>

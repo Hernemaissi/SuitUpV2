@@ -4,7 +4,7 @@ Suitupv2::Application.routes.draw do
   
   resources :image_albums
   resources :adverts
-  resources :companies, only: [:show, :create, :new]
+  resources :companies, only: [:index, :show, :create, :new]
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -12,6 +12,7 @@ Suitupv2::Application.routes.draw do
   scope "(:locale)", :locale => /fi|en/ do
     root :to => "static#index"
     get '/about' => "static#about"
+    get '/search' => "search#index"
     get '/contact' => "static#contact"  
   end
 

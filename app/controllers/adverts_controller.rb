@@ -1,4 +1,10 @@
 class AdvertsController < ApplicationController
+  impressionist actions: [:show], unique: [:session_hash]
+
+  def index
+    @ads = Advert.all
+  end
+
   def new
     @ad = Advert.new
   end
@@ -20,9 +26,7 @@ class AdvertsController < ApplicationController
 
   def show
     @ad = Advert.find(params[:id])
-  end
-
-  def index
+    @view_count = @ad.impressionist_count(:filter=>:session_hash)
   end
 
   def edit

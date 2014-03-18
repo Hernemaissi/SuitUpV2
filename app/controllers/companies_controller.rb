@@ -1,5 +1,9 @@
 class CompaniesController < ApplicationController
 
+  def index
+    @companies = Company.all
+  end
+
   def new
     @company = Company.new
   end
@@ -16,6 +20,7 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+    @view_count = @company.impressionist_count(:filter=>:session_hash)
   end
 
   private
