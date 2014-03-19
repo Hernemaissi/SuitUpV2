@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="<%= I18n.locale || "en" %>">
 	<head>
+
+          <style>
+    /* Prevents slides from flashing */
+    #slides {
+      display:none;
+    }
+  </style>
+
         <meta charset="UTF-8">
 		<title> <%= t "application.title" %> </title>
 		<%= stylesheet_link_tag "application", :media => "all", "data-turbolinks-track" => true  %>

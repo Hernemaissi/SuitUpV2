@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.slides.min
 //= require_tree .
 
 
@@ -23,6 +24,11 @@ $(function() {
     $(".image_upload").change(function() {
        $(this).next().show();
     });
+
+    $("#slides").slidesjs({
+        width: 940,
+        height: 528
+      });
 
     
     // Dropdown nav for small screens

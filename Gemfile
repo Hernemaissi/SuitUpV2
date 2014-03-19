@@ -42,6 +42,7 @@ gem 'figaro'
 #analytics with impressions
 gem 'impressionist'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

@@ -5,13 +5,16 @@
 <p> Color: <%= @ad.color %> </p>
 
 <p>Images: </p>
-
+<div id="slides">
 <% @ad.image_album.images.each do |image| %>
+
 
 <p> <%= image_tag image.image_url %> </p>
 
+<% end %>
+</div>
 <p> View count: <%= @view_count %> </p>
 
-<% end %>
+
 
 

@@ -16,7 +16,10 @@ class ImageAlbum < ActiveRecord::Base
 
   def upload_images(images)
     images.each_value do |img|
-      Image.create(:image => img, :image_album_id => self.id)
+      if img
+        image = Image.create(:image_album_id => self.id)
+        image.update_attribute(:image, img)
+      end
     end
   end
 
