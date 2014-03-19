@@ -17,6 +17,14 @@
 
 
 $(function() {
+
+    $(".hidden").hide();
+
+    $(".image_upload").change(function() {
+       $(this).next().show();
+    });
+
+    
     // Dropdown nav for small screens
     $(document).click(function() {
         $('#dropdown-nav').removeClass('expanded');
@@ -31,4 +39,5 @@ $(function() {
        .blur(function() {
            $(this).removeClass('expanded');
         });
+ 
 });

@@ -16,7 +16,8 @@ class AdvertsController < ApplicationController
     if ad.save
       i = ImageAlbum.create(:advert_id => ad.id)
       i.save!
-      Image.create(:image => params[:image], :image_album_id => i.id)
+      img = Image.create(:image_album_id => i.id)
+      img.update_attribute(:image, params[:image])
       flash[:success] = "Image created succesfully"
       redirect_to ad
     else

@@ -9,8 +9,15 @@
 #
 
 class ImageAlbum < ActiveRecord::Base
-  has_many :images
+  has_many :images, :dependent => :destroy
   belongs_to :advert
 
   validates :advert_id, presence: true
+
+  def upload_images(images)
+    images.each_value do |img|
+      Image.create(:image => img, :image_album_id => self.id)
+    end
+  end
+
 end
