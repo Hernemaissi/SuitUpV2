@@ -13,6 +13,7 @@ fi:
     contact: "Yhteystiedot"
     register: "Rekisteröidy"
     login: "Kirjaudu sisään"
+    profile: "Oma profiili"
     
   #footer in app/views/layout/application.html.erb   
   footer:

@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  impressionist actions: [:show], unique: [:session_hash]
 
   def index
     @companies = Company.all

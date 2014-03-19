@@ -6,6 +6,7 @@ Suitupv2::Application.routes.draw do
   resources :adverts
   resources :companies, only: [:index, :show, :create, :new]
   devise_for :users
+  resources :users, :only => [:show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,6 +15,8 @@ Suitupv2::Application.routes.draw do
     get '/about' => "static#about"
     get '/search' => "search#index"
     get '/contact' => "static#contact"  
+    # get '/profile' => "users#show"
+    get 'users/:id' => 'users#show', :as => 'profile'
   end
 
   # Example of regular route:

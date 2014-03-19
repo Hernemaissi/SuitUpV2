@@ -59,8 +59,11 @@
 							<%= nav_link_single("nav.companies", companies_path) %>
 						</li>
 						<li>
-							<%= nav_link_single("nav.about", about_path) %>
+							<%= nav_link_single("nav.profile", about_path) %>
 						</li>
+						<% if user_signed_in? %>
+						<li><%= link_to t("nav.about"), profile_path(current_user.id) %></li>
+						<% end %>
 					</ul>
 				</nav>
 				<div class="separator-line double"></div>
