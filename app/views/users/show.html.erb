@@ -1,7 +1,7 @@
 <% content_for :head do %>
     <%= javascript_include_tag 'users.js' %>
 		<style>
-body {
+.aGraph {
   font: 10px sans-serif;
 }
 
@@ -46,6 +46,12 @@ Company <%= @user.company.name %>:n adit</br>
          		 	<% @user.company.adverts.each do |ad| %>
          		 	<li><%= link_to ad.name, ad  %> </li>
          	 		<% end %>
+
+</div>
+
+<div>
+
+            <%= link_to "Lisää uusi ilmoitus", new_advert_path  %><br />
 
 </div>
 
