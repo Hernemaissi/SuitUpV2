@@ -1,4 +1,65 @@
+<% content_for :head do %>
+    <%= javascript_include_tag 'users.js' %>
+		<style>
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+		</style>
+<% end %>
+
 
    		<h1>
         <%= @user.name %>
         </h1>
+
+<div>
+Oma company: <%= @user.company.name %></br>
+
+Company <%= @user.company.name %>:n adit</br>
+         		 	<% @user.company.adverts.each do |ad| %>
+         		 	<li><%= link_to ad.name, ad  %> </li>
+         	 		<% end %>
+
+</div>
+
+<div>
+<h1>Stats</h1>
+Visitors to company site:
+
+<p> View count all: <%= @view_count_all %> </p>
+<p> View count sessions: <%= @view_count_sessions %> </p>
+<p> View count unique: <%= @view_count_unique %> </p>
+
+	<div id="graph" class="aGraph"></div>
+
+
+
+</div>
+

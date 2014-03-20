@@ -15,10 +15,14 @@ Suitupv2::Application.routes.draw do
     get '/about' => "static#about"
     get '/search' => "search#index"
     get '/contact' => "static#contact"  
-    # get '/profile' => "users#show"
-    get 'users/:id' => 'users#show', :as => 'profile'
+    get '/users/:id' => 'users#show', :as => 'profile'
+
   end
 
+  match '/adverts/rent/:id', to: 'adverts#rent', :as => :rent, via: [:get, :post]
+  get '/adverts/impressions/:id', to: 'adverts#impressions', :as => :impressions, :defaults => { :format => 'json' }
+
+  # get 'adverts/impressions' => 'adverts#impressions'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -32,7 +36,7 @@ Suitupv2::Application.routes.draw do
   #   resources :products do
   #     member do
   #       get 'short'
-  #       post 'toggle'
+  #       post 'rent'
   #     end
   #
   #     collection do
@@ -55,11 +59,11 @@ Suitupv2::Application.routes.draw do
   #   end
 
   # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
+  #   concern :rentable do
+  #     post 'rent'
   #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+  #   resources :posts, concerns: :rentable
+  #   resources :photos, concerns: :rentable
 
   # Example resource route within a namespace:
   #   namespace :admin do

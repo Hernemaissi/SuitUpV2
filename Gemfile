@@ -42,6 +42,9 @@ gem 'figaro'
 #analytics with impressions
 gem 'impressionist'
 
+#D3.js
+gem "d3-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

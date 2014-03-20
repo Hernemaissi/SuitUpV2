@@ -14,5 +14,5 @@
 class Advert < ActiveRecord::Base
   has_one :image_album
   belongs_to :company
-  is_impressionable :counter_cache => true, :column_name => :view_count, :unique => :session_hash
+  is_impressionable
 end

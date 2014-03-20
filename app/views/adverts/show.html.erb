@@ -10,8 +10,14 @@
 
 <p> <%= image_tag image.image_url %> </p>
 
-<p> View count: <%= @view_count %> </p>
+<p> View count all: <%= @view_count_all %> </p>
+<p> View count sessions: <%= @view_count_sessions %> </p>
+<p> View count unique: <%= @view_count_unique %> </p>
+
+<p> Rent count all: <%= @rent_count_all %> </p>
+<p> Rent count unique: <%= @rent_count_unique %> </p>
 
 <% end %>
 
 
+<%= link_to("varaa",  rent_path(:id => @ad.id), :method => :post, :remote => true) %>

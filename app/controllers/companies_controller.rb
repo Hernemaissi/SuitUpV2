@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  impressionist actions: [:show], unique: [:session_hash]
+  impressionist actions: [:show]
 
   def index
     @companies = Company.all
@@ -21,7 +21,9 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
-    @view_count = @company.impressionist_count(:filter=>:session_hash)
+    @view_count_all = @company.impressionist_count(:filter=>:all)
+    @view_count_sessions = @company.impressionist_count(:filter=>:session_hash)
+    @view_count_unique = @company.impressionist_count(:filter=>:ip_address)
   end
 
   private

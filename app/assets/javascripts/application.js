@@ -12,9 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-
-
+// require_tree .
 
 $(function() {
     // Dropdown nav for small screens
@@ -23,12 +21,12 @@ $(function() {
     });
 
     $('#dropdown-nav')
-       .bind('click focus', function(e){
-          $(this).toggleClass('expanded');
-          $(this).focus();
-              e.stopPropagation(); 
-       })
-       .blur(function() {
-           $(this).removeClass('expanded');
+        .bind('click focus', function(e) {
+            $(this).rentClass('expanded');
+            $(this).focus();
+            e.stopPropagation();
+        })
+        .blur(function() {
+            $(this).removeClass('expanded');
         });
 });

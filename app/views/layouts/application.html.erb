@@ -8,6 +8,7 @@
 		<%= javascript_include_tag "application", "data-turbolinks-track" => true  %>
 		<%= csrf_meta_tags %>
 		<meta name="viewport" content="width=device-width">
+		<%= yield :head %>
 	</head>
 	<body>
 
@@ -59,10 +60,10 @@
 							<%= nav_link_single("nav.companies", companies_path) %>
 						</li>
 						<li>
-							<%= nav_link_single("nav.profile", about_path) %>
+							<%= nav_link_single("nav.about", about_path) %>
 						</li>
 						<% if user_signed_in? %>
-						<li><%= link_to t("nav.about"), profile_path(current_user.id) %></li>
+						<li><%= link_to t("nav.profile"), profile_path(current_user.id) %></li>
 						<% end %>
 					</ul>
 				</nav>
