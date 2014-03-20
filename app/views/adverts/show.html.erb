@@ -5,10 +5,12 @@
 <p> Color: <%= @ad.color %> </p>
 
 <p>Images: </p>
-
+<div id="slides">
 <% @ad.image_album.images.each do |image| %>
 
+
 <p> <%= image_tag image.image_url %> </p>
+<% end %>
 
 <p> View count all: <%= @view_count_all %> </p>
 <p> View count sessions: <%= @view_count_sessions %> </p>
@@ -17,7 +19,10 @@
 <p> Rent count all: <%= @rent_count_all %> </p>
 <p> Rent count unique: <%= @rent_count_unique %> </p>
 
-<% end %>
+</div>
+
+
+
 
 
 <%= link_to("varaa",  rent_path(:id => @ad.id), :method => :post, :remote => true) %>
