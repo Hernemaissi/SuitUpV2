@@ -7,6 +7,13 @@ en:
   #navigation in app/views/layout/application.html.erb    
   nav:
     home: "Home"
+    search: "Search"
+    companies: "Companies"
     about: "About"
     contact: "Contact"
+    register: "Register"
+    login: "Log in"
+    profile: "Profile"
+    male: "Men"
+    female: "Women"
     

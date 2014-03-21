@@ -24,10 +24,16 @@ $(function() {
     });
 
     $("#slides").slidesjs({
-        width: 940,
-        height: 528
+        width: 150,
+        height: 150
     });
 
+    $("#gender_female").click(function() {
+        $("body").addClass('female');
+    });
+    $("#gender_male").click(function() {
+        $("body").removeClass('female');
+    });
 
     // Dropdown nav for small screens
     $(document).click(function() {

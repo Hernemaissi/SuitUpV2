@@ -20,7 +20,7 @@
 	</head>
 	<body>
 
-<div class="main-container">
+	<div class="header-container">
 			<header>
 				<nav id="dropdown-nav" class="dropdown">
 					<div class="dropdown-icon"></div>
@@ -52,11 +52,20 @@
 						</li>
 					</ul>
 				</div>
-				<a class="banner" href="/">Suit Up Banner Goes Here </a>
+				<a class="banner" href="/">Suit Up</a>
 				<!--<a class="banner" href="/"> <%= image_tag("banner-small.png", :class => "banner-small") %>
 				<%= image_tag("banner-large.png", :class => "banner-large") %> </a>-->
-				<div class="separator-line header-line"></div>
+				<!-- <div class="separator-line header-line"></div> -->
 				<nav class="large">
+					<ul>
+						<li>
+							<a id="gender_male"><%= t "nav.male" %></a>
+						</li>
+						<li>
+							<a id="gender_female"><%= t "nav.female" %></a>
+						</li>
+					</ul>
+				<!-- <div class="separator-line"></div> -->
 					<ul>
 						<li>
 							<%= nav_link_single("nav.home" , root_path) %>
@@ -75,8 +84,10 @@
 						<% end %>
 					</ul>
 				</nav>
-				<div class="separator-line double"></div>
 			</header>
+		</div>
+				<div class="separator-line double"></div>
+		<div class="main-container">
 			<div role="document" class="document">
 				<%= yield %>
 			</div>

@@ -14,6 +14,8 @@ fi:
     register: "Rekisteröidy"
     login: "Kirjaudu sisään"
     profile: "Oma profiili"
+    male: "Miehet"
+    female: "Naiset"
     
   #footer in app/views/layout/application.html.erb   
   footer:

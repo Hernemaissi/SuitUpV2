@@ -29,6 +29,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'altehaas';
+    src: font-url('AlteHaasGroteskBold.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+
 
 /* ============================================================
     Sections
@@ -187,4 +194,15 @@ img {
 label.required:after{
     content:" *";
     color:#CC0000;
+}
+
+
+
+.slidesjs-container {
+}
+.slides-container {
+  position: static;
+  float: left;
+  height: 500px;
+  width: 200px;
 }
